@@ -15,10 +15,10 @@ jobs:
 
       - name: Generate plugin artifact
         run: |
-          mkdir -p release/daan-strip-db-dump
-          rsync -rc --exclude-from="$GITHUB_WORKSPACE/.distignore" "$GITHUB_WORKSPACE/" release/daan-strip-db-dump/ --delete --delete-excluded
+          mkdir -p release/edd-email-tags
+          rsync -rc --exclude-from="$GITHUB_WORKSPACE/.distignore" "$GITHUB_WORKSPACE/" release/edd-email-tags/ --delete --delete-excluded
           cd "${GITHUB_WORKSPACE}/release" || exit
-          zip -r "${GITHUB_WORKSPACE}/daan-strip-db-dump.zip" .
+          zip -r "${GITHUB_WORKSPACE}/edd-email-tags.zip" .
 
       - name: Upload release asset
         uses: actions/upload-release-asset@v1
@@ -26,6 +26,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ${{github.workspace}}/daan-strip-db-dump.zip
-          asset_name: daan-strip-db-dump.zip
+          asset_path: ${{github.workspace}}/edd-email-tags.zip
+          asset_name: edd-email-tags.zip
           asset_content_type: application/zip
