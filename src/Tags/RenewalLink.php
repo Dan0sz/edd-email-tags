@@ -8,6 +8,8 @@
 
 namespace Daan\EDD\EmailTags\Tags;
 
+use EDD_Subscription;
+
 class RenewalLink {
 	private $text_domain = 'daan-edd-email-tags';
 
