@@ -31,7 +31,7 @@ class RenewalLink {
 			__( 'Display a URL allowing readers to renew their license.', $this->text_domain ),
 			[ $this, 'replace_tag' ],
 			__( 'Renewal Link', $this->text_domain ),
-			[ 'subscription' ],
+			[ 'subscription', 'license' ],
 			[]
 		);
 	}
