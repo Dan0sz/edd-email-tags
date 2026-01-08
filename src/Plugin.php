@@ -22,8 +22,8 @@ class Plugin {
 	 * @return void
 	 */
 	private function init() {
-		add_action( 'edd_add_email_tags', [ $this, 'add_renewal_link_email_tag' ], 99 );
-		add_action( 'edd_add_email_tags', [ $this, 'add_software_licensing_email_tag' ], 101 );
+		add_action( 'edd_add_email_tags', [ $this, 'add_renewal_link_email_tag' ] );
+		add_action( 'edd_add_email_tags', [ $this, 'add_software_licensing_email_tag' ] );
 	}
 
 	/**
