@@ -7,3 +7,6 @@ This plugin adds to Email tags for use in EDD's email templates.
 - `ffwp_license_keys`: generates a cleaner (compared to the core tag) overview of purchased license keys, which also
   keeps in mind variable pricing
   options.
+
+It also adds the Payment Method condition (Emails > Condition) to subscription emails, e.g. renewal reminders:
+`{if payment_method="stripe"}…{/if}`. EDD's own condition only works in order emails.
