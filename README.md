@@ -1,4 +1,4 @@
-# Additional Email Tags for Easy Digital Downloads.
+# Email Mods for Easy Digital Downloads
 
 This plugin adds to Email tags for use in EDD's email templates.
 
