@@ -76,6 +76,7 @@ class Plugin {
 	 * @return string
 	 */
 	public function fix_tag_urls( $content ) {
-		return preg_replace( '~(href=["\'])https?://(https?://)~i', '$1$2', $content );
+		// Also with encoded quotes, e.g. href=&quot;.
+		return preg_replace( '~(href=(?:["\']|&quot;|&#0*3[49];|&apos;))https?://(https?://)~i', '$1$2', $content );
 	}
 }
