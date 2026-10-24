@@ -24,6 +24,7 @@ class Plugin {
 	private function init() {
 		add_action( 'edd_add_email_tags', [ $this, 'add_renewal_link_email_tag' ] );
 		add_action( 'edd_add_email_tags', [ $this, 'add_software_licensing_email_tag' ] );
+		add_action( 'edd_email_conditional_tags_register_conditions', [ $this, 'add_payment_method_condition' ] );
 	}
 
 	/**
@@ -42,5 +43,16 @@ class Plugin {
 	 */
 	public function add_software_licensing_email_tag() {
 		new Tags\LicenseKeys();
+	}
+
+	/**
+	 * Add the Payment Method condition to subscription emails.
+	 *
+	 * @param \EDD\Pro\Emails\ConditionalTags\ConditionRegistry $registry
+	 *
+	 * @return void
+	 */
+	public function add_payment_method_condition( $registry ) {
+		( new Conditions\SubscriptionPaymentMethod() )->register( $registry );
 	}
 }

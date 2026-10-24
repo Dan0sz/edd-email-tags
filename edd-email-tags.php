@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Easy Digital Downloads - Additional Email Tags
- * Description: Add additional email tags to Easy Digital Downloads.
- * Version: 1.0.2
+ * Plugin Name: Easy Digital Downloads - Email Mods
+ * Description: Additional email tags and conditions for Easy Digital Downloads.
+ * Version: 1.0.3
  * Author: Daan from Daan.dev
  * Author URI: https://daan.dev
  * GitHub Plugin URI: Dan0sz/edd-email-tags
